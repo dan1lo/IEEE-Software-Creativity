@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex IEEE_Software_Creativity_AI_Extended"] 1786646169.07751 "IEEE_Software_Creativity_AI_Extended.aux" "IEEE_Software_Creativity_AI_Extended.bbl" "IEEE_Software_Creativity_AI_Extended" 1786646169.53908 0
+["bibtex main"] 1786646248.49405 "main.aux" "main.bbl" "main" 1786646248.94991 0
   "./references.bib" 1786645798.56741 7222 53a9a06ba08353cea1acfef2c36a8913 ""
   "/usr/local/texlive/2026/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "IEEE_Software_Creativity_AI_Extended.aux" 1786646169.38498 4126 cfb1b43c294d162403c58c6eb75d0514 "pdflatex"
+  "main.aux" 1786646248.79866 4126 cfb1b43c294d162403c58c6eb75d0514 "pdflatex"
   (generated)
-  "IEEE_Software_Creativity_AI_Extended.bbl"
-  "IEEE_Software_Creativity_AI_Extended.blg"
+  "main.bbl"
+  "main.blg"
   (rewritten before read)
-["pdflatex"] 1786646169.14428 "/Users/dmr/Documents/GitHub/IEEE-Software-Creativity/IEEE_Software_Creativity_AI_Extended.tex" "IEEE_Software_Creativity_AI_Extended.pdf" "IEEE_Software_Creativity_AI_Extended" 1786646169.53923 0
-  "/Users/dmr/Documents/GitHub/IEEE-Software-Creativity/IEEE_Software_Creativity_AI_Extended.tex" 1786646167.37128 28668 d761f2553769db12c6fe1a94521bb7f8 ""
+["pdflatex"] 1786646248.56013 "/Users/dmr/Documents/GitHub/IEEE-Software-Creativity/main.tex" "main.pdf" "main" 1786646248.95001 0
+  "/Users/dmr/Documents/GitHub/IEEE-Software-Creativity/main.tex" 1786646167.37128 28668 d761f2553769db12c6fe1a94521bb7f8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm" 1136768653 4484 b828043cbd581d289d955903c1339981 ""
@@ -75,11 +75,11 @@
   "/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1786579954 5573038 b99aad5e4898a9034e953632f940512b ""
   "/usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1786579911 3636772 c806f1c6e3f25e5d422a91a3eee457a6 ""
   "/usr/local/texlive/2026/texmf.cnf" 1774209515 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
-  "IEEE_Software_Creativity_AI_Extended.aux" 1786646169.38498 4126 cfb1b43c294d162403c58c6eb75d0514 "pdflatex"
-  "IEEE_Software_Creativity_AI_Extended.bbl" 1786646169.14282 6052 072c7e914e5911d902c738d667612793 "bibtex IEEE_Software_Creativity_AI_Extended"
-  "IEEE_Software_Creativity_AI_Extended.tex" 1786646167.37128 28668 d761f2553769db12c6fe1a94521bb7f8 ""
+  "main.aux" 1786646248.79866 4126 cfb1b43c294d162403c58c6eb75d0514 "pdflatex"
+  "main.bbl" 1786646248.55862 6052 072c7e914e5911d902c738d667612793 "bibtex main"
+  "main.tex" 1786646167.37128 28668 d761f2553769db12c6fe1a94521bb7f8 ""
   (generated)
-  "IEEE_Software_Creativity_AI_Extended.aux"
-  "IEEE_Software_Creativity_AI_Extended.log"
-  "IEEE_Software_Creativity_AI_Extended.pdf"
+  "main.aux"
+  "main.log"
+  "main.pdf"
   (rewritten before read)

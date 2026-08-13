@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.12)  13 AUG 2026 15:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.12)  13 AUG 2026 15:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/dmr/Documents/GitHub/IEEE-Software-Creativity/IEEE_Software_Creativity_AI_Extended.tex
-(/Users/dmr/Documents/GitHub/IEEE-Software-Creativity/IEEE_Software_Creativity_AI_Extended.tex
+**/Users/dmr/Documents/GitHub/IEEE-Software-Creativity/main.tex
+(/Users/dmr/Documents/GitHub/IEEE-Software-Creativity/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/local/texlive/2026/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
@@ -161,8 +161,8 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count294
-) (./IEEE_Software_Creativity_AI_Extended.aux)
-\openout1 = `IEEE_Software_Creativity_AI_Extended.aux'.
+) (./main.aux)
+\openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
@@ -241,7 +241,7 @@ Underfull \hbox (badness 2020) in paragraph at lines 153--153
  \T1/phv/b/n/9.53561 4.3 Pre-lim-i-nary Pro-files of Human-AI Col-lab-o-ra-tion
  []
 
-[3] [4] (./IEEE_Software_Creativity_AI_Extended.bbl
+[3] [4] (./main.bbl
 Underfull \hbox (badness 2150) in paragraph at lines 60--61
 []\T1/ppl/m/n/8.03 S. Ri-ton-ummi, V. Si-ito-nen, M. Salo, H. Pirkkalainen, and
  []
@@ -253,7 +253,7 @@ Underfull \hbox (badness 1546) in paragraph at lines 60--61
 
 [5]) [6
 
-] (./IEEE_Software_Creativity_AI_Extended.aux)
+] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -261,14 +261,14 @@ L3 programming layer <2026-01-19>
  ) 
 Here is how much of TeX's memory you used:
  2854 strings out of 467525
- 48935 string characters out of 5418982
- 472859 words of memory out of 5000000
+ 48391 string characters out of 5418982
+ 472539 words of memory out of 5000000
  31749 multiletter control sequences out of 15000+600000
  713875 words of font info for 154 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,9n,65p,1487b,374s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,9n,65p,1455b,374s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on IEEE_Software_Creativity_AI_Extended.pdf (6 pages, 136377 bytes).
+Output written on main.pdf (6 pages, 136377 bytes).
 PDF statistics:
  64 PDF objects out of 1000 (max. 8388607)
  39 compressed objects within 1 object stream
