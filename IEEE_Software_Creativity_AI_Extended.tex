@@ -1,0 +1,204 @@
+\documentclass[10pt,journal,compsoc]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{booktabs}
+\usepackage{url}
+
+\begin{document}
+
+\title{Human Agency in AI-Augmented Software Teams: Creativity, Collaboration, and Emerging Collaboration Profiles}
+
+\author{Danilo~Monteiro~Ribeiro, Kiev~Gama, and Victoria~Jackson%
+\thanks{D. M. Ribeiro and K. Gama are with Universidade Federal de Pernambuco (UFPE) / CESAR School, Recife, Brazil.}%
+\thanks{V. Jackson is with the University of Southampton, Southampton, UK.}}
+
+\markboth{IEEE Software}{}
+
+\IEEEtitleabstractindextext{
+\begin{abstract}
+\textbf{Background:} Generative artificial intelligence (GenAI) tools are increasingly acting as cognitive partners inside software teams, raising human-centric questions about oversight, agency, and collaboration that go beyond individual productivity gains.
+\textbf{Objective:} This study examines how software professionals perceive and integrate GenAI into creative and collaborative team work, and how patterns of human-AI collaboration and agency preservation vary across team contexts.
+\textbf{Method:} We conducted semi-structured interviews with 21 software professionals across [N] companies, each representing a distinct team, and analyzed the data using inductive thematic analysis.
+\textbf{Results:} GenAI broadens developers' creative repertoire while narrowing independent ideation; developers increasingly consult AI instead of colleagues, weakening peer learning; teams are forming triadic collaboration patterns involving developers, colleagues, and AI; and the degree of AI governance and oversight varies across teams, suggesting distinct emerging collaboration profiles.
+\textbf{Conclusion:} AI reshapes both creative practice and team collaboration, but human agency persists as an actively negotiated boundary rather than a fixed property of the tool. These findings offer implications for the design of human-centered AI development tools and for organizational governance of AI adoption.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Generative AI, Human-Centered AI, Software Engineering, Creativity, Collaboration, Human Agency
+\end{IEEEkeywords}}
+
+\maketitle
+
+\IEEEdisplaynontitleabstractindextext
+\IEEEpeerreviewmaketitle
+
+\section{Introduction}
+
+Advances in generative artificial intelligence (GenAI) have profoundly transformed software engineering practice. Tools such as GitHub Copilot, ChatGPT, and Cursor are no longer purely instrumental; they increasingly act as collaborative partners that generate and refactor code, suggest solutions, and explain errors \cite{meem2025,seeber2020}. As AI components are embedded inside development pipelines and team workflows, software teams become socio-technical systems in which developers, testers, and other stakeholders must interpret AI behavior, decide when to trust it, and remain accountable for outcomes they did not fully produce themselves. Understanding this shift requires a human-centered lens: one that keeps developer agency, understanding, and participation central, rather than treating trust and technical reliability as properties of the tool alone \cite{amershi2019}.
+
+Software development encompasses a wide range of creative activities, including ideation, interface and architectural design \cite{groeneveld2021}, and coding \cite{inman2024}. Creativity, understood as the ability to produce ideas that are both new and valuable \cite{boden2004}, is central to innovation in software teams and their products \cite{gama2025}. AI tools expand developers' creative repertoire \cite{jackson2025}, but also raise concerns about overreliance and dilution of authorship \cite{amershi2019}. Creativity and collaboration are closely intertwined in practice, occurring both in shared settings such as whiteboarding \cite{groeneveld2021} and in independent work \cite{inman2024}. Prior work has examined GenAI's effects on individual productivity \cite{jetbrains2025,meem2025,pereira2025} and on shifts in developer interaction \cite{salomon2026}, but creativity and collaboration have largely been studied in isolation from one another, and neither has been examined systematically through the lens of human agency preservation, the mechanisms by which developers and teams retain oversight, understanding, and decision authority as AI becomes a more active participant in their work.
+
+This separation leaves an important gap. In software teams, creative activities such as ideation and architectural reasoning are inherently collaborative \cite{groeneveld2021}, and tools that reshape how developers interact necessarily reshape how they create together. Studying these two dimensions jointly, and asking how teams preserve human oversight while doing so, surfaces tensions that neither lens alone reveals: whether AI-driven autonomy gains come at the cost of collective learning, and whether the practices teams develop to keep humans in the loop differ across organizational contexts. Prior conceptual work argues that turning AI into a genuine team member requires rethinking roles, orchestration, and shared situational awareness \cite{seeber2020}, but empirical evidence on how teams are already doing this, unevenly and informally, remains scarce.
+
+This paper reports a qualitative interview study with 21 software professionals across [N] companies, addressing three research questions:
+\begin{itemize}
+\item \textbf{RQ1.} How do software developers perceive and use AI tools in creative activities within software development teams?
+\item \textbf{RQ2.} How does the use of AI tools influence collaboration and team dynamics in software development teams?
+\item \textbf{RQ3.} What forms do human-AI collaboration and agency-preservation practices take across different team contexts?
+\end{itemize}
+
+RQ1 and RQ2 were addressed in a preliminary conference version of this study \cite{sbes2026}, based on 13 interviews across four companies. This extended version adds RQ3, expands the dataset to 21 professionals, and reframes the findings explicitly around human agency preservation, a central concern for human-centered AI in software engineering. We find that AI broadens developers' creative repertoire while narrowing independent ideation, that developers increasingly consult AI instead of colleagues in ways that weaken peer learning, that teams are forming triadic collaboration patterns involving developers, colleagues, and AI, and that the degree of formal governance and informal oversight varies meaningfully across teams. The remainder of this paper presents related work, method, findings, and a discussion of implications for the design and governance of human-centered AI tools in software engineering.
+
+\section{Background and Related Work}
+
+Boden defines creativity as the ability to produce ideas or artifacts that are new, surprising, and valuable \cite{boden2004}. Software developers tend to hold a narrower view, treating creativity as a form of problem-solving that emphasizes reuse and usefulness over originality \cite{inman2024}. Popular techniques include collaborative practices such as brainstorming and whiteboarding \cite{groeneveld2021}, alongside independent, focused work that supports the flow state conducive to creativity \cite{ritonummi2023}. A supportive environment, technical skill, motivation, and creativity-relevant processes all shape individual creativity at work \cite{amabile2016}.
+
+Studies of GenAI's influence on creativity report mixed perceptions: some developers say it has improved their creativity, others say it has worsened it \cite{jetbrains2025,meem2025}, and GenAI is rarely used for tasks traditionally seen as creative, such as design \cite{pereira2025}. A recent interview study with 30 practitioners found that GenAI can stimulate creative problem-solving and productivity while raising concerns about overreliance, skill degradation, and reduced communication \cite{zacharias2026}. GenAI may inhibit creativity when developers turn to it instead of colleagues \cite{salomon2026}, reducing the social interactions through which learning occurs, and senior developers have voiced concern that novices become overly reliant on it \cite{pereira2025}, potentially hindering the collaboration skills that support creativity \cite{zhou2018}.
+
+Effects on team collaboration are also drawing attention. Salomon et al. found that developers increasingly consult AI before colleagues, reducing interruptions but weakening the peer exchanges through which tacit knowledge circulates, with colleagues reserved for contextual reasoning and complex decisions \cite{salomon2026}. Seeber et al. argue that for AI to act as a genuine team member, teams must rethink roles, orchestration, and shared situational awareness, which current tools only partly support \cite{seeber2020}. Human-centered AI design guidelines emphasize that systems should support human oversight, provide contextually appropriate transparency, and remain correctable by the humans who use them \cite{amershi2019}. Our study connects this design-oriented perspective to empirical evidence: rather than assuming oversight is designed into tools, we ask how developers and teams actively construct and negotiate it in daily creative and collaborative work, and whether that construction differs across organizational settings, a question not addressed by prior studies that examine creativity \cite{jetbrains2025,meem2025,pereira2025} or collaboration \cite{salomon2026,seeber2020} in isolation.
+
+\section{Research Method}
+
+We conducted a qualitative interview study \cite{seaman2008} to investigate how software engineering professionals perceive and integrate AI-assisted tools into daily practice, focusing on creativity, collaboration, and, in this extended analysis, cross-team variation in human-AI collaboration practices. A qualitative design was chosen to capture nuanced experience and sensemaking that quantitative measures alone cannot address \cite{seaman2008}.
+
+\subsection{Participants}
+
+We recruited 21 software engineering professionals from [N] companies, with participants from the same company working within the same team, providing both individual and within-team perspectives. Table~\ref{tab:participants} summarizes participant roles, experience, and company. \textbf{[TODO: update Table~\ref{tab:participants} with the eight additional participants (P14 to P21), their roles, experience, and company; the table below currently reflects the original 13-participant SBES sample only.]} Eligibility required professional software development experience and active or recent use of AI-assisted tools in collaborative contexts. Participants spanned different roles, seniority levels, and organizational settings; we use the term developers broadly to refer to this full spectrum, including QA and project management roles, except where a specific role is relevant to the discussion. We used an iterative, non-probabilistic sampling strategy \cite{baltes2022}, beginning with convenience sampling within our professional networks and adding purposive sampling once we noted the absence of junior developers who began programming after the release of ChatGPT.
+
+\begin{table}[t]
+\centering
+\caption{Interview participants profile}
+\label{tab:participants}
+\begin{tabular}{@{}llll@{}}
+\toprule
+ID & Current Role & Experience (yrs) & Company \\
+\midrule
+P1  & Test team lead           & 14  & C1 \\
+P2  & Software Engineer        & 7   & C1 \\
+P3  & Software Engineer        & 8   & C1 \\
+P4  & Project Manager          & 23  & C2 \\
+P5  & Tech Lead                & 13  & C1 \\
+P6  & Tech Lead                & 14  & C1 \\
+P7  & Software Engineer Intern & $<$1 & C3 \\
+P8  & Software Engineer Intern & 1   & C3 \\
+P9  & Software Engineer        & 2   & C2 \\
+P10 & QA Engineer               & 10  & C4 \\
+P11 & QA Lead                   & 26  & C4 \\
+P12 & Software Engineer        & 5   & C2 \\
+P13 & Software Engineer        & 5   & C2 \\
+P14--P21 & \multicolumn{3}{l}{\textit{[TODO: add the 8 new participants]}} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Data Collection and Analysis}
+
+Data were collected through semi-structured interviews conducted online, each lasting 45 to 60 minutes and audio-recorded with consent. \textbf{[TODO: confirm collection period and any additional round of data collection for the 8 new participants, and update the sentence below accordingly.]} The protocol addressed integration of AI tools into workflows, perceived impact on creativity and ideation, effects on team coordination, and perceived risks and organizational implications. It was piloted with two participants whose interviews were discarded from the final dataset. Interviews were transcribed verbatim and pseudonymized. The study was approved by UFPE's ethics board; participants volunteered and provided informed consent.
+
+We analyzed the data using inductive thematic analysis \cite{braun2006}. Two researchers independently open-coded the transcripts and compared interpretations to resolve disagreements. Codes were grouped into higher-level themes through a researcher-led process supported by an LLM, used only to suggest alternative groupings and exploratory interpretations, with all analytical decisions remaining the responsibility of the research team \cite{bano2024,trinkenreich2025}. Peer debriefing with a third researcher was used throughout to examine interpretations and refine themes. For this extended analysis, we additionally revisited the coded dataset with a cross-case lens, comparing patterns of AI governance, oversight, and collaboration across companies to surface preliminary collaboration profiles (RQ3, Section~\ref{sec:rq3}). This cross-case analysis is exploratory; it should be read as a first step toward a more formal typology.
+
+\section{Findings}
+
+Our analysis identified three central themes: AI Use, Consequences of AI, and Collaboration and Team Dynamics, with Emotions emerging as a cross-cutting dimension shaping how participants made sense of both creative and collaborative experience. Section~\ref{sec:rq3} presents the additional cross-case analysis addressing RQ3.
+
+\subsection{AI Use, Consequences, and Emotions (RQ1)}
+
+Participants described AI as a cognitive, creative, analytical, and communicative resource rather than only a coding assistant, used for ideation, implementation, documentation, testing, and automation. AI supported ideation and creative exploration by generating alternative solutions and proofs of concept; some participants saw this as expanding creative exploration, while others noted that ideas sometimes arrive already formed, potentially constraining deeper ideation.
+
+\begin{quote}
+\textit{``Trying to explore possible solutions, what ends up happening is a list of options and the cost-benefit of each one, to explore options that we haven't even considered yet.''} (P6)
+\end{quote}
+
+AI was consistently treated as a hypothesis generator requiring human validation rather than a source of truth, and as an on-demand tutor that shortened the learning curve for unfamiliar topics. It also supported testing, documentation, and communication tasks, with several participants noting that consulting AI had become faster than consulting colleagues, a pattern with direct implications for peer interaction.
+
+\begin{quote}
+\textit{``Sometimes it suggests things, we review the document and think, `Oh no, what it said doesn't make any sense. Let's remove it.'\thinspace''} (P4)
+\end{quote}
+
+Consequences of AI use were reported with a clear duality. Positive effects included increased productivity and speed, reduced cognitive effort on routine questions, and greater autonomy and competence. Negative effects included reduced cognitive depth, dependency, technical quality issues from hallucinated or inaccurate outputs, negative impacts on creativity when reliance limited independent ideation, and professional insecurity about long-term skill erosion.
+
+\begin{quote}
+\textit{``Today it's almost become an addiction, you know, to do everything with artificial intelligence.''} (P6)
+\end{quote}
+
+Emotional responses ranged from satisfaction, relief, and increased confidence to technical frustration, existential and professional frustration, and anxiety about no longer fully understanding one's own work. These reactions were closely tied to perceptions of control, competence, trust, and dependency.
+
+\begin{quote}
+\textit{``If you don't think, don't ask questions, don't read what AI is doing, I think AI can harm a career.''} (P7)
+\end{quote}
+
+\subsection{Collaboration and Team Dynamics (RQ2)}
+\label{sec:rq2-quotes}
+
+AI integration reshaped team-level dynamics beyond individual cognition. AI consultation sometimes replaced peer collaboration, producing more individualistic workflows and weakening the informal exchange through which tacit knowledge and mentoring circulate.
+
+\begin{quote}
+\textit{``The exchange of experiences I had in the past with code, I see that this has diminished; this learning, this searching, this exchange between people makes us learn much more. And I don't see that much anymore today.''} (P1)
+\end{quote}
+
+At the same time, teams experimented with AI-mediated collaboration, including collaborative prompt writing and AI-integrated group discussion, forming an emerging triadic collaboration pattern in which developers, colleagues, and AI reason together rather than AI serving only individual workflows.
+
+\begin{quote}
+\textit{``Usually, it's people chatting and someone says, `No, wait a minute, guys, I'm going to create a GPT chat here, let's see what it says.'\thinspace' That's the reality of how it works.''} (P2)
+\end{quote}
+
+Organizations varied in the degree of formal governance applied to AI use, from informal norms to pre-established, reviewed prompt templates used before human review.
+
+\begin{quote}
+\textit{``We have some pre-established commands with pre-made, reviewed templates, before I send it for review by other humans, I already have it reviewed by AI.''} (P9)
+\end{quote}
+
+\subsection{Preliminary Profiles of Human-AI Collaboration Across Teams (RQ3)}
+\label{sec:rq3}
+
+Because participants from the same company worked within the same team, the dataset supports a cross-case comparison of how creativity, collaboration, and oversight practices co-occur within each organizational context. \textbf{[TODO: this subsection currently analyzes only the original four teams (C1--C4, 13 participants); it needs to be re-run once the 8 new interviews and their team/company assignments are added, since new teams may introduce additional profiles or revise the ones below.]} We treat these as exploratory profiles rather than a validated typology.
+
+\begin{description}
+\item[C1 (test lead, two software engineers, two tech leads):] AI use was concentrated in technical implementation and testing support, with senior tech leads acting as an explicit validation layer before AI-assisted work reached review. This resembles a \textit{supervised-delegation} profile, in which AI output is treated as a draft that a designated senior role is responsible for certifying.
+\item[C2 (project manager, two software engineers, one junior engineer):] Participants described AI as central to communication and documentation as well as coding, with the project manager framing AI primarily as an efficiency tool for coordination rather than a creative partner. This suggests a \textit{coordination-oriented} profile, where AI's main negotiated role is reducing administrative and communicative overhead.
+\item[C3 (two software engineering interns):] AI functioned mainly as a tutor, helping participants who began their careers alongside GenAI tools close knowledge gaps. Oversight was less a matter of catching AI errors and more a matter of learning to ask for and evaluate explanations, an \textit{apprenticeship-with-AI} profile distinct from the delegation pattern seen in more senior teams.
+\item[C4 (QA engineer, QA lead):] This team showed the most explicit formal governance, with pre-established, reviewed prompt templates required before AI-assisted work was submitted for human review, a \textit{governed-use} profile in which agency preservation is encoded as organizational policy rather than left to individual judgment.
+\end{description}
+
+Read together, these cases suggest that human agency preservation is not a single practice but a family of practices that map onto team composition, seniority mix, and organizational maturity around AI. This variation is consistent with, and extends, the triadic collaboration pattern reported in Section~\ref{sec:rq2-quotes}: the specific shape that triad takes, who plays the validating role, and how formally that role is defined, differs by team.
+
+\section{Discussion}
+
+Across creativity, collaboration, and the cross-team comparison, AI operates simultaneously as an amplifier of individual capability and as a fragmenting force on collective work practices. Developers gain autonomy, speed, and creative exploration, but these gains carry observable costs to peer interaction, mentoring, and shared knowledge, and the practices teams use to manage that trade-off differ by context.
+
+\subsection{Human Agency as an Actively Negotiated Boundary}
+
+Participants consistently positioned humans as responsible for decision-making, code validation, and architectural reasoning, describing AI as generating options while humans retained evaluation and selection. This asymmetry extended into creative activities: AI generates alternatives, but the evaluative and selective dimensions of creative work remained human, consistent with human-centered AI guidelines that emphasize designed-in correctability and appropriate reliance \cite{amershi2019} and with prior findings on AI use for routine questions versus colleagues for contextual reasoning \cite{salomon2026}. The profiles in Section~\ref{sec:rq3} show that this boundary is not fixed by the tool but constructed differently by each team, through senior review, formal templates, coordination priorities, or an individual's developing judgment. This reframes human oversight as an organizational and interpersonal accomplishment rather than a property that a tool either has or lacks.
+
+\subsection{Emerging Triadic Collaboration and Its Local Variants}
+
+A finding with limited precedent in prior literature is the emergence of triadic collaboration involving developers, colleagues, and AI reasoning jointly, differing qualitatively from individual AI use and from traditional human-human collaboration. Existing frameworks for team collaboration do not yet fully account for this pattern \cite{seeber2020}. Our cross-case comparison suggests the triad is not uniform: in C4 it is formalized as policy, in C1 it runs through a designated senior reviewer, and in C3 it is closer to a two-party apprenticeship that has not yet become fully triadic. Understanding how these variants stabilize over time, and whether some are more sustainable or safer than others, is an important direction for future research.
+
+\subsection{Erosion of Social Learning and Potential Deskilling}
+
+Participants reported reduced peer consultation and weakened mentoring relationships, extending prior evidence that developers increasingly consult AI before colleagues \cite{salomon2026}. From the perspective of social learning theory, in which learning occurs through observation and interaction with others \cite{bandura1977}, substituting AI for some of these interactions may reduce opportunities for informal knowledge exchange. Some participants described this substitution as risking an illusion of competence among novice developers who mistake AI-generated output for genuine understanding, a concern also raised in a broader practitioner study \cite{zacharias2026}. Our data suggest that the apprenticeship profile observed in C3 may be particularly exposed to this risk, since interns had less prior experience against which to calibrate AI-generated explanations.
+
+\subsection{Impact for Academia}
+
+These findings extend research on human-AI collaboration by showing that agency preservation practices are heterogeneous across teams rather than a single generalizable pattern, opening a research agenda on how team composition, seniority mix, and governance maturity shape the form that human oversight takes. They also provide empirical grounding for conceptual research agendas on AI as a team member \cite{seeber2020}, suggesting concrete dimensions (formal governance, designated validation roles, apprenticeship dynamics) along which such agendas could be operationalized and tested.
+
+\subsection{Impact for Practice and Society}
+
+For practitioners and organizations, the profiles suggest that agency preservation cannot be addressed with a single policy; a governance template suited to a QA-heavy team may not fit a team of interns learning alongside AI. Organizations introducing GenAI tools may benefit from explicitly deciding, rather than allowing to emerge implicitly, who plays the validating role in AI-assisted work and how that role is supported. At a broader level, the erosion of informal mentoring observed across teams has implications for how the next generation of developers builds expertise, a concern relevant to educators and to the software industry's long-term workforce development, particularly as junior developers increasingly enter the field with GenAI already embedded in their learning process.
+
+\section{Limitations and Threats to Validity}
+
+This study is subject to social desirability bias and selective recall in self-reported AI usage; recurring themes across participants reduce, though do not eliminate, this risk. Researcher subjectivity in analysis is mitigated by documenting the analytical process and by a research team combining SE academics with industry experience. \textbf{[TODO: confirm whether the 21-participant sample remains single-country and single-culture, and update the sentence below if the new participants change this.]} The study was conducted in a single country, and findings may not transfer to contexts with different cultural or organizational norms around AI adoption. The sample included only technical staff, excluding roles such as product managers who may engage with AI differently in creative work. Although participants from the same company worked within the same team, data collection was based on individual interviews rather than team-level observation, so team-level findings, including the collaboration profiles in Section~\ref{sec:rq3}, are inferred from aggregated individual perceptions rather than directly observed shared practice. The cross-case profile analysis in particular is exploratory and should be treated as a hypothesis-generating first step rather than a validated typology. As a preliminary study, no claim to thematic saturation is made.
+
+\section{Conclusion and Future Work}
+
+This study examined how AI tools influence creativity and collaboration in software development teams, and how the practices teams use to preserve human agency vary across organizational contexts. Developers integrate AI across the development process while reporting tensions: reduced peer interaction, risk of overreliance, and weakened mentoring. A cross-case comparison of teams suggests that human oversight is not a fixed property of AI tools but an actively negotiated boundary that takes different forms, supervised delegation, coordination-oriented efficiency, apprenticeship, and formal governance, depending on team composition and organizational maturity.
+
+Four directions emerge for future work. First, longitudinal studies should examine whether AI-related deskilling accumulates or diminishes over time, and whether specific collaboration profiles are more protective against it than others. Second, the preliminary profiles identified here should be validated and refined with a larger, more diverse sample of teams, ideally combined with team-level observation rather than individual interviews alone. Third, future research should explore why AI use remains concentrated in solution development rather than problem framing, and how organizational factors and governance profiles shape this distribution. Fourth, the decline in peer interaction raises the open question of whether AI suppresses collective creativity or enables new, AI-mediated forms of it, a question that longitudinal and observational studies across different collaboration profiles could help answer.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
